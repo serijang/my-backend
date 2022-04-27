@@ -27,7 +27,7 @@ def main():
     return "핵심 쏙쏙 AWS"
 
 @application.route('/fileupload', methods=['POST'])
-def file_upload()
+def file_upload():
     file = request.files['file']
     s3 = boto3.client('s3',
                       aws_access_key_id=os.environ["AWS_ACCESS_KEY_ID"],
